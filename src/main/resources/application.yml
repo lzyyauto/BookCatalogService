@@ -1,0 +1,29 @@
+server:
+    port: 8080
+    servlet:
+        context-path: / 
+
+spring:
+  mvc:
+    throw-exception-if-no-handler-found: true
+  web:
+    resources:
+      add-mappings: false
+  datasource:
+      driver-class-name: org.postgresql.Driver
+      url: jdbc:postgresql://127.0.0.1:5432/bookcatalog
+      username: pgsql
+      password: pgsql
+      hikari:
+          maximum-pool-size: 10
+          minimum-idle: 5
+          idle-timeout: 30000
+  jpa:
+      hibernate:
+          ddl-auto: update
+      show-sql: true
+      properties:
+          hibernate:
+              format_sql: true
+              dialect: org.hibernate.dialect.PostgreSQLDialect
+
