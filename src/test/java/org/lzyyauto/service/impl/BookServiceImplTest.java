@@ -49,9 +49,6 @@ class BookServiceImplTest {
                 .publicationYear(bookDto.getPublicationYear())
                 .description("未分类")
                 .build();
-
-        //清空测试数据
-        bookRepository.delete(book);
     }
 
     @Test
